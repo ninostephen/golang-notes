@@ -1,0 +1,27 @@
+1. go fmt
+```
+$ go fmt
+```
+This command can be used to automatically format out code. This is not as same as the fmt module.
+```
+$ go help fmt
+```
+To format everything in the repo: 
+```
+$ go fmt ./...
+```
+
+2. go build
+```
+$ go build
+```
+The go run command just runs the code and does  generate the binary. 
+
+3. go install
+```
+$ go install hello.go
+$ hello
+Hello World!
+```
+go install on the other hand will compile the code and save it in the bin directory.  The path to the bin directory should be set in the GOBIN global variable. Since the path to the bin file was added to the PATH variable, we can execute the program by just using the program name.
+
