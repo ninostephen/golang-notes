@@ -1,0 +1,26 @@
+Create a new project and set it to use the GOPATH we have set.
+Create a new empty go file and type in the following.
+```
+package main
+
+import "fmt"
+
+func main()  {
+	fmt.Println("Hello World")
+
+}
+```
+To run the go program, execute the following command.
+```
+$ go run hello.go
+Hello World
+```
+
+Getting Dependencies.
+
+```
+$ go get -d github.com/GoesToEleven/go-programming
+$ go get -d github.com/GoesToEleven/GolangTraining
+$ go get -d github.com/GoesToEleven/golang-web-dev
+```
+
