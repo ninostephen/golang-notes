@@ -1,0 +1,31 @@
+This is a agreement on the working folder structure. The below mentioned are the steps.
+1. Create a folder, anywhere, any name.
+2. Create 3 below mentioned 3 folders in it.
+	1. bin - stores the compiled binary
+	2. pkg - store the package files. If there is a program that pulls dependencies from various places, then is compiled and stored here. This helps avoid recompiling it and hence save time.
+	3. src - source directory for all projects.
+3. Under the src directory there will be a domain name and under the domain name a username.
+4. Under the username directory all the projects are stored.
+GOPATH environment variable points to the workspace path.
+GOROOT points to the Golang binary.
+
+Setting up Go Workspace
+
+```
+$ mkdir goworkspace
+$ cd goworkspace
+$ mkdir bin pkg src
+$ ls
+bin  pkg  src
+
+$ vim ~/.bash_aliases
+export GOPATH="/home/watson/workfiles/goworkspace"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOPATH/bin"
+
+$ source ~/.bash_aliases
+$ echo $GOPATH
+/home/watson/workfiles/goworkspace
+$ echo $PATH 
+/home/watson/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/var/lib/snapd/snap/bin:/home/watson/workfiles/goworkspace/bin
+```
