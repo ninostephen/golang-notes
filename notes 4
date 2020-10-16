@@ -1,0 +1,64 @@
+Making our own TYPEs
+
+
+```
+package main
+
+import "fmt"
+
+var x int
+
+type hotdog int
+
+var b hotdog
+
+func main() {
+	fmt.Println(x)
+	fmt.Printf("%T\n", x)
+        b = 43
+	fmt.Println(b)
+	fmt.Printf("%T\n", b)
+}
+
+$ go run *.go
+0
+int
+43
+main.hotdog
+```
+We can not directly assign the value of b to x (x = b). This is because both the variables are of different types.
+
+Type Conversion not casting
+
+```
+x = int(b)
+```
+
+```
+package main
+
+import "fmt"
+
+var x int
+
+type hotdog int
+
+var b hotdog
+
+func main() {
+	fmt.Println(x)
+	fmt.Printf("%T\n", x)
+	fmt.Println(b)
+	fmt.Printf("%T\n", b)
+	x = int(b)
+	fmt.Printf("%T\n", x)
+}
+
+$ go run *.go
+0
+int
+0
+main.hotdog
+int
+```
+
