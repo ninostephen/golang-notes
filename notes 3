@@ -1,0 +1,59 @@
+Identifiers
+
+Identifier name program entities such as variables and types. Identifiers is a sequence of one or more letters and digits. The first letter in an identifier must be a character.
+```
+identifier = letter {letter | unicode_digit}
+```
+
+```
+a
+_x9
+ThisVariableIsExported
+```
+
+Short  Declaration Operator
+
+Allows us to declare variables.
+```
+:=
+```
+This only needed only once when declaring a variable. Afterwards, to change the value of the variable, you can just use =
+This operator can be used to declare and assign value to a variable. Its important to note that a variable that was declared should be used at least once. This is mandatory in go.
+
+Also, you can't use this outside a function. 
+VAR
+
+If there is a need to define a variable out side a function, use the var keyword.
+```
+var y = 0
+var z int # you can declare a variable and also specify its type and the zero value of the type gets assigned
+```
+Unlike  other languages, golang is statically typed. It means that you can not change the type of variables on the fly. 
+Types
+
+```
+package main
+
+import "fmt"
+
+var x = 0
+var y = "Some random string"
+var z = 1.0
+func main() {
+	fmt.Println(x)
+	fmt.Printf("%T\n", x)
+	fmt.Println(y)
+	fmt.Printf("%T\n", y)
+	fmt.Println(z)
+	fmt.Printf("%T\n", z)
+}
+
+$ go run *.go
+0
+int
+Some random string
+string
+1
+float64
+```
+
